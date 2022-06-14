@@ -5,10 +5,8 @@ import SceneBase from '../SceneView/Scene/SceneBase';
 
 export default class FoodManager {
 
-    constructor(sceneView) {        
+    constructor(sceneView) {  
         this.sceneView = sceneView
-
-        // this.sceneView.camera = camera
     }
 
     load() {
@@ -21,8 +19,6 @@ export default class FoodManager {
             this.foods = []
 
             foodsData.foodsData.forEach(food => this.addFood(food.name, food.position, food.scale, food.rotation))
-
-            console.log(this.foods)
 
             this.handleDrag()
 
@@ -45,18 +41,21 @@ export default class FoodManager {
         this.sceneView.scene.add(food)
     }
 
+    // https://jsfiddle.net/janqhxdu/
+
     handleDrag() {
         const controls = new DragControls( this.foods, this.sceneView.camera, this.sceneView.renderer.domElement );
 
         controls.addEventListener( 'dragstart', function ( event ) {
+            console.log(event)
             // event.object.material.emissive.set( 0xaaaaaa );
         } );
 
-        controls.addEventListener ( 'drag', function( event ){
-            event.object.position.z = 0; // bloque l'axe z
-        })
+        // controls.addEventListener ( 'drag', function( event ){
+        //     // event.object.position.z = 0; // bloque l'axe z
+        // })
         
-        controls.addEventListener( 'dragend', function ( event ) {        
+        controls.addEventListener( 'dragend', function ( event ) {
             // event.object.material.emissive.set( 0x000000 );
         } );
     }
