@@ -12,7 +12,7 @@ export default {
         {
             name: 'Papaya_01',
             position: {
-                x: 5,
+                x: 25,
                 y: 0.5,
                 z: 0
             }
@@ -20,7 +20,7 @@ export default {
         // {
         //     name: 'Papaya_02',
         //     position: {
-        //         x: 10,
+        //         x: 40,
         //         y: 0,
         //         z: 0
         //     }

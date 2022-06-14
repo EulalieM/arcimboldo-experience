@@ -5,10 +5,10 @@ import SceneBase from '../SceneView/Scene/SceneBase';
 
 export default class FoodManager {
 
-    constructor(sceneView) {
-
-        
+    constructor(sceneView) {        
         this.sceneView = sceneView
+
+        // this.sceneView.camera = camera
     }
 
     load() {
@@ -20,23 +20,41 @@ export default class FoodManager {
 
             this.foods = []
 
-            foodsData.foodsData.forEach(food => this.addFood(food.name, food.position))
+            foodsData.foodsData.forEach(food => this.addFood(food.name, food.position, food.scale, food.rotation))
 
-            
+            console.log(this.foods)
+
+            this.handleDrag()
 
         }, undefined, function ( error ) {
             console.error( error );
         } );
     }
 
-    addFood(name, {x, y, z}) {
-        const food = this.ressources.getObjectByName(name).children[0] // Mesh
+    addFood(name, position, scale, rotation ) {
+        const food = this.ressources.getObjectByName(name) // Mesh
 
-        // food.scale.set(1, 1, 1)
+        this.foods.push(food)
+
+        food.scale.set(scale)
                 
-        food.position.set(x, y, z)
+        food.position.set(position)
+
+        food.rotation.set(rotation)
         
         this.sceneView.scene.add(food)
+    }
+
+    handleDrag() {
+        const controls = new DragControls( this.foods, this.sceneView.camera, this.sceneView.renderer.domElement );
+
+        controls.addEventListener( 'dragstart', function ( event ) {
+            event.object.material.emissive.set( 0xaaaaaa );
+        } );
+        
+        controls.addEventListener( 'dragend', function ( event ) {        
+            event.object.material.emissive.set( 0x000000 );
+        } );
     }
 
 }
