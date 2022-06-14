@@ -46,7 +46,8 @@ export default class FoodManager {
     handleDrag() {
         const controls = new DragControls( this.foods, this.sceneView.camera, this.sceneView.renderer.domElement );
 
-        controls.addEventListener( 'dragstart', function ( event ) {
+        controls.addEventListener( 'dragstart', ( event ) => {
+            this.sceneView.controls.enabled = false
             console.log(event)
             // event.object.material.emissive.set( 0xaaaaaa );
         } );
@@ -55,7 +56,8 @@ export default class FoodManager {
         //     // event.object.position.z = 0; // bloque l'axe z
         // })
         
-        controls.addEventListener( 'dragend', function ( event ) {
+        controls.addEventListener( 'dragend', ( event ) => {
+            this.sceneView.controls.enabled = true
             // event.object.material.emissive.set( 0x000000 );
         } );
     }
