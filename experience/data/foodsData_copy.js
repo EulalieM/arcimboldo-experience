@@ -4,186 +4,6 @@ export default {
         {
             name: 'Papaya',
             position: {
-                x: -50,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 2,
-                y: 2,
-                z: 2
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },
-        {
-            name: 'Pineapple',
-            position: {
-                x: -45,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },       
-        {
-            name: 'Broccoli',
-            position: {
-                x: -40,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 0.3,
-                y: 0.3,
-                z: 0.3
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },
-        {
-            name: 'Watermelon',
-            position: {
-                x: -35,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 2,
-                y: 2,
-                z: 2
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },
-        {
-            name: 'Cantaloupe',
-            position: {
-                x: -30,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },
-        {
-            name: 'Strawberry',
-            position: {
-                x: -25,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 0.6,
-                y: 0.6,
-                z: 0.6
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },
-        {
-            name: 'Orange',
-            position: {
-                x: -20,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },
-        {
-            name: 'lemon',
-            position: {
-                x: -15,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },
-        {
-            name: 'Banana_01',
-            position: {
-                x: -10,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 0.5,
-                y: 0.5,
-                z: 0.5
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },
-        {
-            name: 'Mango',
-            position: {
-                x: -5,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },
-        {
-            name: 'Kiwi',
-            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -200,34 +20,16 @@ export default {
             }
         },
         {
-            name: 'Coconut',
-            position: {
-                x: 5,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 15,
-                y: 15,
-                z: 15
-            },
-            rotation: {
-                x: 0,
-                y: 0,
-                z: 0
-            }
-        },
-        {
-            name: 'Coconut_02',
+            name: 'Papaya_01',
             position: {
                 x: 10,
                 y: 0,
                 z: 0
             },
             scale: {
-                x: 15,
-                y: 15,
-                z: 15
+                x: 1,
+                y: 1,
+                z: 1
             },
             rotation: {
                 x: 0,
@@ -236,9 +38,27 @@ export default {
             }
         },
         {
-            name: 'Avocado',
+            name: 'Papaya_02',
             position: {
-                x: 15,
+                x: 20,
+                y: 0,
+                z: 0
+            },
+            scale: {
+                x: 1,
+                y: 1,
+                z: 1
+            },
+            rotation: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Papaya_03',
+            position: {
+                x: 30,
                 y: 0,
                 z: 0
             },
@@ -255,18 +75,245 @@ export default {
         },
 
         {
-            name: 'Grape',
+            name: 'Pineapple',
             position: {
                 x: 20,
                 y: 0,
                 z: 0
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
+            }
+        },
+        {
+            name: 'Pineapple_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Pineapple_02',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Pineapple_03',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Broccoli',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Watermelon',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Watermelon_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Watermelon_02',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Cantaloupe',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        ,
+        {
+            name: 'Cantaloupe_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        ,
+        {
+            name: 'Strawberry',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        ,
+        {
+            name: 'Strawberry_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        ,
+        {
+            name: 'Orange',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        ,
+        {
+            name: 'Orange_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'lemon',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'lemon_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Banana',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Banana_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Banana_02',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Mango',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Mango_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Kiwi',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Kiwi_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Coconut',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Coconut_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Coconut_02',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Coconut_03',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Avocado',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Avocado_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Grape',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -275,16 +322,6 @@ export default {
         {
             name: 'Grape_01',
             position: {
-                x: 25,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -293,16 +330,22 @@ export default {
         {
             name: 'Pear',
             position: {
-                x: 30,
+                x: 0,
                 y: 0,
                 z: 0
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
+            }
+        },
+        {
+            name: 'Pear_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Apple',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -311,16 +354,6 @@ export default {
         {
             name: 'Apple001',
             position: {
-                x: 35,
-                y: 0,
-                z: 0
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -329,16 +362,22 @@ export default {
         {
             name: 'Zucchini',
             position: {
-                x: 40,
+                x: 0,
                 y: 0,
                 z: 0
-            },
-            scale: {
-                x: 10,
-                y: 10,
-                z: 10
-            },
-            rotation: {
+            }
+        },
+        {
+            name: 'Zucchini001',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Zucchini002',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -347,16 +386,30 @@ export default {
         {
             name: 'Yam',
             position: {
-                x: 45,
+                x: 0,
                 y: 0,
                 z: 0
-            },
-            scale: {
-                x: 0.5,
-                y: 0.5,
-                z: 0.5
-            },
-            rotation: {
+            }
+        },
+        {
+            name: 'Yam001',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Yam002',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Yam003',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -365,16 +418,14 @@ export default {
         {
             name: 'Turnip',
             position: {
-                x: 50,
+                x: 0,
                 y: 0,
                 z: 0
-            },
-            scale: {
-                x: 0.5,
-                y: 0.5,
-                z: 0.5
-            },
-            rotation: {
+            }
+        },
+        {
+            name: 'Turnip001',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -383,16 +434,6 @@ export default {
         {
             name: 'Spinach',
             position: {
-                x: -50,
-                y: 0,
-                z: 10
-            },
-            scale: {
-                x: 6,
-                y: 6,
-                z: 6
-            },
-            rotation: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -401,16 +442,6 @@ export default {
         {
             name: 'Pumpkin',
             position: {
-                x: -45,
-                y: 0,
-                z: 10
-            },
-            scale: {
-                x: 1.5,
-                y: 1.5,
-                z: 1.5
-            },
-            rotation: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -419,16 +450,22 @@ export default {
         {
             name: 'Potato',
             position: {
-                x: -40,
+                x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Potato_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Potato_02',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -437,16 +474,14 @@ export default {
         {
             name: 'Onion',
             position: {
-                x: -35,
+                x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Onion001',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -455,16 +490,14 @@ export default {
         {
             name: 'Mushrooms',
             position: {
-                x: -30,
+                x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 0.3,
-                y: 0.3,
-                z: 0.3
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Mushrooms_01',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -473,16 +506,6 @@ export default {
         {
             name: 'Lettuce',
             position: {
-                x: -25,
-                y: 0,
-                z: 10
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -491,16 +514,14 @@ export default {
         {
             name: 'Garlic',
             position: {
-                x: -20,
+                x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 0.5,
-                y: 0.5,
-                z: 0.5
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Garlic_01',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -509,16 +530,30 @@ export default {
         {
             name: 'Eggplant',
             position: {
-                x: -15,
+                x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 0.5,
-                y: 0.5,
-                z: 0.5
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Eggplant_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Eggplant_02',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Eggplant_03',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -527,16 +562,30 @@ export default {
         {
             name: 'Cucumber',
             position: {
-                x: -10,
+                x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 0.5,
-                y: 0.5,
-                z: 0.5
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Cucumber_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Cucumber_02',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Cucumber_03',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -545,16 +594,6 @@ export default {
         {
             name: 'Celery',
             position: {
-                x: -5,
-                y: 0,
-                z: 10
-            },
-            scale: {
-                x: 0.2,
-                y: 0.2,
-                z: 0.2
-            },
-            rotation: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -565,14 +604,12 @@ export default {
             position: {
                 x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 8,
-                y: 8,
-                z: 8
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Cauliflower_01',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -581,16 +618,14 @@ export default {
         {
             name: 'Artichoke',
             position: {
-                x: 5,
+                x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 10,
-                y: 10,
-                z: 10
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Artichoke_01',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -599,16 +634,6 @@ export default {
         {
             name: 'Asparagus',
             position: {
-                x: 10,
-                y: 0,
-                z: 10
-            },
-            scale: {
-                x: 0.6,
-                y: 0.6,
-                z: 0.6
-            },
-            rotation: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -617,16 +642,38 @@ export default {
         {
             name: 'Beetroot',
             position: {
-                x: 15,
+                x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 4,
-                y: 4,
-                z: 4
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Beetroot_01',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Beetroot_02',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Beetroot_03',
+            position: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        },
+        {
+            name: 'Beetroot_04',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -635,16 +682,14 @@ export default {
         {
             name: 'Brussel_sprouts',
             position: {
-                x: 20,
+                x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Brussel_sprouts_01',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
@@ -653,20 +698,20 @@ export default {
         {
             name: 'Cabbage',
             position: {
-                x: 30,
+                x: 0,
                 y: 0,
-                z: 10
-            },
-            scale: {
-                x: 1,
-                y: 1,
-                z: 1
-            },
-            rotation: {
+                z: 0
+            }
+        },
+        {
+            name: 'Cabbage_01',
+            position: {
                 x: 0,
                 y: 0,
                 z: 0
             }
         }
+
     ]
+
 }

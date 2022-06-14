@@ -31,17 +31,17 @@ export default class FoodManager {
         } );
     }
 
-    addFood(name, position, scale, rotation ) {
+    addFood(name, position, scale, rotation) {
         const food = this.ressources.getObjectByName(name) // Mesh
 
         this.foods.push(food)
 
-        food.scale.set(scale)
-                
-        food.position.set(position)
+        food.position.set(position.x, position.y, position.z)
 
-        food.rotation.set(rotation)
-        
+        food.scale.set(scale.x, scale.y, scale.z)
+
+        food.rotation.set(rotation.x, rotation.y, rotation.z)
+
         this.sceneView.scene.add(food)
     }
 
@@ -49,11 +49,15 @@ export default class FoodManager {
         const controls = new DragControls( this.foods, this.sceneView.camera, this.sceneView.renderer.domElement );
 
         controls.addEventListener( 'dragstart', function ( event ) {
-            event.object.material.emissive.set( 0xaaaaaa );
+            // event.object.material.emissive.set( 0xaaaaaa );
         } );
+
+        controls.addEventListener ( 'drag', function( event ){
+            event.object.position.z = 0; // bloque l'axe z
+        })
         
         controls.addEventListener( 'dragend', function ( event ) {        
-            event.object.material.emissive.set( 0x000000 );
+            // event.object.material.emissive.set( 0x000000 );
         } );
     }
 

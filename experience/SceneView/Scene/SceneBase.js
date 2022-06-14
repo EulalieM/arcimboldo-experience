@@ -8,6 +8,7 @@ import {
     MeshBasicMaterial,
     PerspectiveCamera,
     Scene,
+    Vector3,
     WebGLRenderer
 } from 'three';
 
@@ -68,7 +69,12 @@ export default class SceneBase {
             1,
             10000
         );
-        this.camera.position.set(0, 50, 100);
+
+        this.camera.position.set(0, 15, 100);
+
+        this.cameraTarget = new Vector3(0, 20, 0)
+
+        this.camera.lookAt(this.cameraTarget)
     }
 
     setControls () {
