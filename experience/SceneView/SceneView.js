@@ -9,7 +9,7 @@ export default class SceneView extends SceneBase {
         this.isReady = false;
 
         // HELPERS
-        this.setControls();
+        // this.setControls();
         this.setHelpers();
 
         this.foodManager = new FoodManager(this)
