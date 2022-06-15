@@ -52,7 +52,6 @@ export default class SceneBase {
     setScene () {
         this.scene = new Scene();
         this.scene.background = new TextureLoader().load( "assets/images/textures/dark-grunge-texture-background.jpg" );
-        // this.scene.background = new TextureLoader().load( "assets/images/textures/wooden-frame.png" );
     }
 
     setLights () {
