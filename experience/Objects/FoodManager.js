@@ -8,6 +8,8 @@ export default class FoodManager {
 
     constructor(sceneView) {  
         this.sceneView = sceneView
+        this.foods = []
+        this.tweens = []
     }
 
     load() {
@@ -16,9 +18,7 @@ export default class FoodManager {
         loader.load( '/assets/food/scene.gltf', ( gltf ) => {
 
             this.ressources = gltf.scene    
-
-            this.foods = []
-
+        
             foodsData.forEach(food => this.addFood(food.name, food.position, food.scale, food.rotation))
 
             this.handleDrag()
@@ -39,20 +39,35 @@ export default class FoodManager {
 
         this.foods.push(food)
 
-        food.position.set(position.x, position.y, position.z)
+        food.position.set(Math.random() * 50 - 25, Math.random() * 10 - 5, Math.random() * 50 - 25)
 
         food.scale.set(scale.x, scale.y, scale.z)
 
         food.rotation.set(MathUtils.degToRad(rotation.x), MathUtils.degToRad(rotation.y), MathUtils.degToRad(rotation.z))
 
         this.sceneView.scene.add(food)
+
+        let tween
+
+        tween = new TWEEN.Tween(food.position)
+
+        tween.to(position, 3000)
+
+        tween.easing(TWEEN.Easing.Exponential.In);
+
+        console.log(TWEEN.Easing)
+
+        window.addEventListener('click', () => {
+            tween.start()
+        })
+
     }
 
     handleDrag() {
         const controls = new DragControls( this.foods, this.sceneView.camera, this.sceneView.renderer.domElement );
 
         controls.addEventListener( 'dragstart', ( event ) => {
-            // this.sceneView.controls.enabled = false
+            this.sceneView.controls.enabled = false
             // event.object.material.emissive.set( 0xaaaaaa );
         } );
 
@@ -66,7 +81,7 @@ export default class FoodManager {
         })
         
         controls.addEventListener( 'dragend', ( event ) => {
-            // this.sceneView.controls.enabled = true
+            this.sceneView.controls.enabled = true
             // event.object.material.emissive.set( 0x000000 );
             this.getFoodPosition()
         } );

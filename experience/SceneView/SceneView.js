@@ -8,8 +8,8 @@ export default class SceneView extends SceneBase {
         super.init();
 
         // HELPERS
-        // this.setControls();
-        // this.setHelpers();
+        this.setControls();
+        this.setHelpers();
 
         this.addFrame()
 
