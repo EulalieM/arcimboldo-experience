@@ -52,7 +52,6 @@ export default class FoodManager {
 
         controls.addEventListener( 'dragstart', ( event ) => {
             this.sceneView.controls.enabled = false
-            console.log(event)
             // event.object.material.emissive.set( 0xaaaaaa );
         } );
 
