@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "signals": "^1.0.0",
-    "three": "^0.141.0"
+    "three": "^0.141.0",
+    "tween.js": "^16.6.0"
   }
 }

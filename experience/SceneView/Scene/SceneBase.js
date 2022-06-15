@@ -14,6 +14,8 @@ import {
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
+import TWEEN from 'tween.js'
+
 export default class SceneBase {
     constructor () {
         this.init();
@@ -108,6 +110,7 @@ export default class SceneBase {
     }
 
     render () {
+        TWEEN.update();
         requestAnimationFrame(this.render.bind(this));
         if (this.controls) this.controls.update();
         this.update();

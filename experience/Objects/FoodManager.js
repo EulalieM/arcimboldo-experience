@@ -2,6 +2,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import foodsData from '../data/foodsData';
 import { DragControls } from 'three/examples/jsm/controls/DragControls'
 import { MathUtils } from 'three';
+import TWEEN from 'tween.js';
 
 export default class FoodManager {
 
@@ -21,7 +22,7 @@ export default class FoodManager {
             foodsData.forEach(food => this.addFood(food.name, food.position, food.scale, food.rotation))
 
             this.handleDrag()
-
+            
         }, undefined, function ( error ) {
             console.error( error );
         } );
@@ -51,7 +52,7 @@ export default class FoodManager {
         const controls = new DragControls( this.foods, this.sceneView.camera, this.sceneView.renderer.domElement );
 
         controls.addEventListener( 'dragstart', ( event ) => {
-            this.sceneView.controls.enabled = false
+            // this.sceneView.controls.enabled = false
             // event.object.material.emissive.set( 0xaaaaaa );
         } );
 
@@ -65,7 +66,7 @@ export default class FoodManager {
         })
         
         controls.addEventListener( 'dragend', ( event ) => {
-            this.sceneView.controls.enabled = true
+            // this.sceneView.controls.enabled = true
             // event.object.material.emissive.set( 0x000000 );
             this.getFoodPosition()
         } );
