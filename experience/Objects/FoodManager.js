@@ -1,7 +1,7 @@
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import foodsData from '../data/foodsData';
 import { DragControls } from 'three/examples/jsm/controls/DragControls'
-import SceneBase from '../SceneView/Scene/SceneBase';
+import { MathUtils } from 'three';
 
 export default class FoodManager {
 
@@ -18,7 +18,7 @@ export default class FoodManager {
 
             this.foods = []
 
-            foodsData.foodsData.forEach(food => this.addFood(food.name, food.position, food.scale, food.rotation))
+            foodsData.forEach(food => this.addFood(food.name, food.position, food.scale, food.rotation))
 
             this.handleDrag()
 
@@ -28,7 +28,13 @@ export default class FoodManager {
     }
 
     addFood(name, position, scale, rotation) {
-        const food = this.ressources.getObjectByName(name) // Mesh
+        const foodModel = this.ressources.getObjectByName(name).children[0] // Mesh
+
+        if (!foodModel) {
+            return false;
+        }
+
+        const food = foodModel.clone()
 
         this.foods.push(food)
 
@@ -36,12 +42,10 @@ export default class FoodManager {
 
         food.scale.set(scale.x, scale.y, scale.z)
 
-        food.rotation.set(rotation.x, rotation.y, rotation.z)
+        food.rotation.set(MathUtils.degToRad(rotation.x), MathUtils.degToRad(rotation.y), MathUtils.degToRad(rotation.z))
 
         this.sceneView.scene.add(food)
     }
-
-    // https://jsfiddle.net/janqhxdu/
 
     handleDrag() {
         const controls = new DragControls( this.foods, this.sceneView.camera, this.sceneView.renderer.domElement );
@@ -52,14 +56,33 @@ export default class FoodManager {
             // event.object.material.emissive.set( 0xaaaaaa );
         } );
 
-        // controls.addEventListener ( 'drag', function( event ){
-        //     // event.object.position.z = 0; // bloque l'axe z
-        // })
+        controls.addEventListener ( 'drag', function( event ){
+            event.object.position.x = MathUtils.clamp(event.object.position.x, -50, 50);
+            event.object.position.y = MathUtils.clamp(event.object.position.y, -20, 20);
+            event.object.position.z = MathUtils.clamp(event.object.position.z, -50, 50);
+
+            // event.object.position.x = 0;
+            // event.object.position.z = 0;
+        })
         
         controls.addEventListener( 'dragend', ( event ) => {
             this.sceneView.controls.enabled = true
             // event.object.material.emissive.set( 0x000000 );
+            this.getFoodPosition()
         } );
+    }
+
+    getFoodPosition() {
+        this.foods.forEach((element, i) => {
+            foodsData[i].position.x = element.position.x
+            foodsData[i].position.y = element.position.y
+            foodsData[i].position.z = element.position.z
+        })
+        console.log(JSON.stringify(foodsData))
+    }
+
+    handleScale() {
+
     }
 
 }

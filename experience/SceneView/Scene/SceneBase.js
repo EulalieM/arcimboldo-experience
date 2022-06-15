@@ -8,6 +8,7 @@ import {
     MeshBasicMaterial,
     PerspectiveCamera,
     Scene,
+    TextureLoader,
     Vector3,
     WebGLRenderer
 } from 'three';
@@ -51,7 +52,7 @@ export default class SceneBase {
 
     setScene () {
         this.scene = new Scene();
-        this.scene.background = new Color(0xffffff);
+        this.scene.background = new TextureLoader().load( "assets/images/textures/dark-grunge-texture-background.jpg" );
     }
 
     setLights () {
@@ -70,7 +71,7 @@ export default class SceneBase {
             10000
         );
 
-        this.camera.position.set(0, 15, 100);
+        this.camera.position.set(0, 100, 0);
 
         this.cameraTarget = new Vector3(0, 20, 0)
 
