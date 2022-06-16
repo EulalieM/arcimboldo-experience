@@ -8,8 +8,8 @@ export default class SceneView extends SceneBase {
         super.init();
 
         // HELPERS
-        this.setControls();
-        this.setHelpers();
+        // this.setControls();
+        // this.setHelpers();
 
         this.addFrame()
 
@@ -25,7 +25,7 @@ export default class SceneView extends SceneBase {
     addFrame () {
         const frameImg = new TextureLoader().load( "assets/images/textures/wooden-frame.png" );
 
-        const frameGeometry = new PlaneGeometry(80, 80)
+        const frameGeometry = new PlaneGeometry(90, 90)
         const frameMaterial = new MeshBasicMaterial({ 
             map: frameImg, 
             side: DoubleSide,

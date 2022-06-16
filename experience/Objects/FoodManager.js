@@ -1,7 +1,7 @@
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import foodsData from '../data/foodsData';
 import { DragControls } from 'three/examples/jsm/controls/DragControls'
-import { MathUtils } from 'three';
+import { MathUtils, Vector2 } from 'three';
 import TWEEN from 'tween.js';
 
 export default class FoodManager {
@@ -26,6 +26,8 @@ export default class FoodManager {
         }, undefined, function ( error ) {
             console.error( error );
         } );
+
+        this.movingEyes()        
     }
 
     addFood(name, position, scale, rotation) {
@@ -39,36 +41,30 @@ export default class FoodManager {
 
         this.foods.push(food)
 
-        food.position.set(Math.random() * 50 - 25, Math.random() * 10 - 5, Math.random() * 50 - 25)
-
-        food.scale.set(scale.x, scale.y, scale.z)
-
+        food.position.set(Math.random() * 60 - 30, Math.random() * 10 - 5, Math.random() * 60 - 30)
+        food.scale.multiplyScalar(scale)
         food.rotation.set(MathUtils.degToRad(rotation.x), MathUtils.degToRad(rotation.y), MathUtils.degToRad(rotation.z))
 
         this.sceneView.scene.add(food)
 
         let tween
-
         tween = new TWEEN.Tween(food.position)
-
-        tween.to(position, 3000)
-
+        tween.to(position, 2000)
         tween.easing(TWEEN.Easing.Exponential.In);
-
-        console.log(TWEEN.Easing)
-
-        window.addEventListener('click', () => {
-            tween.start()
-        })
-
+        // console.log(TWEEN.Easing)
+        tween.start()
+        // window.addEventListener('click', () => {
+        //     tween.start()
+        // })        
     }
 
     handleDrag() {
         const controls = new DragControls( this.foods, this.sceneView.camera, this.sceneView.renderer.domElement );
 
         controls.addEventListener( 'dragstart', ( event ) => {
-            this.sceneView.controls.enabled = false
+            // this.sceneView.controls.enabled = false
             // event.object.material.emissive.set( 0xaaaaaa );
+            console.log(event.object)
         } );
 
         controls.addEventListener ( 'drag', function( event ){
@@ -81,7 +77,7 @@ export default class FoodManager {
         })
         
         controls.addEventListener( 'dragend', ( event ) => {
-            this.sceneView.controls.enabled = true
+            // this.sceneView.controls.enabled = true
             // event.object.material.emissive.set( 0x000000 );
             this.getFoodPosition()
         } );
@@ -94,6 +90,13 @@ export default class FoodManager {
             foodsData[i].position.z = element.position.z
         })
         console.log(JSON.stringify(foodsData))
+    }
+
+    movingEyes() {
+        document.addEventListener('mousemove', function(e) {
+            this.mousecoords = { x: e.clientX, y: e.clientY };
+            console.log(this.mousecoords)
+          });
     }
 
 }
