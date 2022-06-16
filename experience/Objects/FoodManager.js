@@ -14,14 +14,15 @@ export default class FoodManager {
         this.clickedOnce = false
     }
 
-    load() {
+    load () {
         const loader = new GLTFLoader();
-        loader.load( '/assets/food/scene.gltf', ( gltf ) => {
+
+        loader.load( '/assets/food/scene.gltf', (gltf) => {
             this.ressources = gltf.scene    
             this.setup()
-        }, undefined, function ( error ) {
-            console.error( error );
-        } );
+        }, undefined, function (error) {
+            console.error(error);
+        });
     }
 
     setup () {
@@ -59,47 +60,49 @@ export default class FoodManager {
         tween.start()
         
         if (name === 'Avocado') {
-            this.eyes.push({food, position})
+            this.eyes.push({ food, position })
         }
     }
 
-    handleDrag() {
+    handleDrag () {
         const controls = new DragControls(this.foods, this.sceneView.camera, this.sceneView.renderer.domElement);
 
         controls.addEventListener('dragstart', (event) => {
             // this.sceneView.controls.enabled = false
             // console.log(event.object)
-        } );
+        });
 
         controls.addEventListener('drag', (event) => {
-            event.object.position.x = MathUtils.clamp(event.object.position.x, -50, 50);
+            event.object.position.x = MathUtils.clamp(event.object.position.x, -30, 30);
             event.object.position.y = MathUtils.clamp(event.object.position.y, -20, 20);
-            event.object.position.z = MathUtils.clamp(event.object.position.z, -50, 50);
+            event.object.position.z = MathUtils.clamp(event.object.position.z, -30, 30);
         })
         
         controls.addEventListener('dragend', (event) => {
             // this.sceneView.controls.enabled = true
-            this.getFoodPosition()
-        } );
+            // this.getFoodPosition()
+        });
     }
 
-    getFoodPosition() {
+    getFoodPosition () {
         this.foods.forEach((element, i) => {
             foodsData[i].position.x = element.position.x
             foodsData[i].position.y = element.position.y
             foodsData[i].position.z = element.position.z
         })
-        // console.log(JSON.stringify(foodsData))
+
+        console.log(JSON.stringify(foodsData))
     }
 
-    movingEyes() {
+    movingEyes () {
         window.addEventListener( 'pointermove', this.onPointerMove.bind(this) );     
     }
 
-    onPointerMove(event) {
+    onPointerMove (event) {
         if (this.clickedOnce) {
             return false;
         }
+
         const pointer = new Vector2();
         pointer.x = ( event.clientX / window.innerWidth ) * 2 - 1;
         pointer.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
@@ -110,7 +113,7 @@ export default class FoodManager {
         })
     }
 
-    getFirstClick() {
+    getClick () {
         window.addEventListener('click', () => {
             this.clickedOnce = true
         })

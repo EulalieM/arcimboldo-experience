@@ -11,7 +11,7 @@ export default class SceneView extends SceneBase {
         // this.setControls();
         // this.setHelpers();
 
-        this.addFrame()
+        this.setFrame()
 
         this.foodManager = new FoodManager(this)
 
@@ -22,9 +22,8 @@ export default class SceneView extends SceneBase {
         this.foodManager.load()
     }
 
-    addFrame () {
-        const frameImg = new TextureLoader().load( "assets/images/textures/wooden-frame.png" );
-
+    setFrame () {
+        const frameImg = new TextureLoader().load("assets/images/textures/wooden-frame.png");
         const frameGeometry = new PlaneGeometry(90, 90)
         const frameMaterial = new MeshBasicMaterial({ 
             map: frameImg, 
@@ -33,7 +32,6 @@ export default class SceneView extends SceneBase {
         })
 
         this.frameMesh = new Mesh(frameGeometry, frameMaterial)
-
         this.frameMesh.rotateX(Math.PI / 2)
 
         this.scene.add(this.frameMesh)
