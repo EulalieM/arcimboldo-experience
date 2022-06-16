@@ -25,8 +25,10 @@ export default class FoodManager {
 
     setup () {
         foodsData.forEach(food => this.addFood(food.name, food.position, food.scale, food.rotation))
+
+        // TODO : arrêter le moving eyes si l'utilisateur commence à déplacer un élément
+        this.movingEyes()
         this.handleDrag()
-        this.movingEyes()  
         console.log(this.eyes)
     }
 
