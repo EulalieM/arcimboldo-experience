@@ -72,7 +72,7 @@ export default class SceneBase {
             10000
         );
 
-        this.camera.position.set(0, 100, 0);
+        this.camera.position.set(0, 110, 0);
 
         this.cameraTarget = new Vector3(0, 20, 0)
 
