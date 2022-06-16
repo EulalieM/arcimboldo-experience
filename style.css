@@ -9,3 +9,15 @@ canvas{
   inset: 0;
   position: fixed;
 }
+
+#info {
+	position: absolute;
+	bottom: 10px;
+  right: 10px;
+	width: 100%;
+	text-align: right;
+	z-index: 100;
+	display:block;
+  color: white;
+  font-family: 'Patrick Hand', cursive;
+}
