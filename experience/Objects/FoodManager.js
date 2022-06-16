@@ -78,7 +78,7 @@ export default class FoodManager {
         
         controls.addEventListener('dragend', (event) => {
             this.sceneView.controls.enabled = true
-            // this.getFoodPosition()
+            this.getFoodPosition()
         } );
     }
 
