@@ -26,15 +26,22 @@ export default class FoodManager {
     }
 
     setup () {
+        // Assign origin position of objects
         foodsData.forEach(food => this.addFood(food.name, food.position, food.scale, food.rotation))
 
-        this.getClick()
-
+        // Eyes movement
         this.movingEyes()
 
+        // Catch a click (to stop eyes movement)
+        this.getClick()
+
+        // drag an object
         this.handleDrag()
     }
 
+    /**
+     * Configure and animate an object.
+     */
     addFood(name, position, scale, rotation) {
         const foodModel = this.ressources.getObjectByName(name).children[0] // Mesh
 
@@ -64,6 +71,9 @@ export default class FoodManager {
         }
     }
 
+    /**
+     * Configure controls to drag an object.
+     */
     handleDrag () {
         const controls = new DragControls(this.foods, this.sceneView.camera, this.sceneView.renderer.domElement);
 
@@ -84,6 +94,9 @@ export default class FoodManager {
         });
     }
 
+    /**
+     * Helper to copy paste console data in foodsData.js.
+     */
     getFoodPosition () {
         this.foods.forEach((element, i) => {
             foodsData[i].position.x = element.position.x
@@ -94,10 +107,16 @@ export default class FoodManager {
         console.log(JSON.stringify(foodsData))
     }
 
+    /**
+     *  Eyes movement that follows the user's pointer (until the user clicks on the window).
+     */
     movingEyes () {
         window.addEventListener( 'pointermove', this.onPointerMove.bind(this) );     
     }
 
+    /**
+     * Verify if user already clicks on the window, calculate pointer position and reassign eyes position.
+     */
     onPointerMove (event) {
         if (this.clickedOnce) {
             return false;
@@ -113,6 +132,9 @@ export default class FoodManager {
         })
     }
 
+    /**
+     * Catch user click event on the window.
+     */
     getClick () {
         window.addEventListener('click', () => {
             this.clickedOnce = true
