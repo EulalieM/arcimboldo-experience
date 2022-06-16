@@ -28,7 +28,7 @@ export default class FoodManager {
     setup () {
         foodsData.forEach(food => this.addFood(food.name, food.position, food.scale, food.rotation))
 
-        this.getFirstClick()
+        this.getClick()
 
         this.movingEyes()
 
